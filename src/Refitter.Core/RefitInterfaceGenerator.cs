@@ -128,7 +128,7 @@ internal class RefitInterfaceGenerator : IRefitInterfaceGenerator
                 .Replace(operationNamePlaceholder, operationName);
         }
 
-        return operationName;
+        return operationName.RemoveNumbers();
     }
 
     protected static void GenerateForMultipartFormData(CSharpOperationModel operationModel, StringBuilder code)
