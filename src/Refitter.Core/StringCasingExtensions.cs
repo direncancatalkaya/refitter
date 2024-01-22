@@ -1,3 +1,5 @@
+using System.Text.RegularExpressions;
+
 namespace Refitter.Core;
 
 internal static class StringCasingExtensions
@@ -76,5 +78,10 @@ internal static class StringCasingExtensions
         }
 
         return string.Join(string.Empty, parts);
+    }
+    
+    public static string RemoveNumbers(this string input)
+    {
+        return Regex.Replace(input, @"\d", "");
     }
 }

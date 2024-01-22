@@ -10,6 +10,12 @@ public class DependencyInjectionSettings
     /// Base Address for the HttpClient
     /// </summary>
     public string? BaseUrl { get; set; }
+    
+    /// <summary>
+    /// Gets or sets the service name for the HttpClient.
+    /// This can be used to identify the service that the HttpClient is interacting with.
+    /// </summary>
+    public string? ServiceName { get; set; }
 
     /// <summary>
     /// A collection of HttpMessageHandlers to be added to the HttpClient pipeline.
